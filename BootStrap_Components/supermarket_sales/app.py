@@ -79,12 +79,11 @@ def render_graphs(cities, main_variable):
     for fig in [fig_city, fig_gender, fig_payment, fig_income_time]:
         fig.update_layout(margin=dict(l=0, r=0, t=20, b=20), height=200, template='minty')
 
-    # fig_city.update_layout(margin=dict(l=0, r=0, t=20, b=20), height=200)
-    # fig_payment.update_layout(margin=dict(l=0, r=0, t=20, b=20), height=200)    
     fig_product_income.update_layout(margin=dict(l=0, r=0, t=20, b=20), height=500, template='minty')
 
     return fig_city, fig_payment, fig_gender, fig_income_time, fig_product_income
 
 
 if __name__ == '__main__':
-    app.run_server(port=8050, debug=True)
+    # app.run_server(port=8050, debug=True)
+    app.run_server(debug=False,port=8080,host='0.0.0.0')
