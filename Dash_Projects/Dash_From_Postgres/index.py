@@ -7,7 +7,11 @@ import plotly.graph_objects as go
 import plotly.express as px
 
 from app import app
-df = pd.read_csv(r'C:\Users\Desenv_IG\Documents\1 - Python\PythonDashboards\Dash_Projects\Dash_From_Postgres\vendas_cliente_NF.csv')
+from create_csv import get_csv
+
+#df = pd.read_csv(r'C:\Users\Desenv_IG\Documents\1 - Python\PythonDashboards\Dash_Projects\Dash_From_Postgres\vendas_cliente_NF.csv')
+df = get_csv()
+
 df['dt_emissao'] = pd.to_datetime(df['dt_emissao'])
 
 
